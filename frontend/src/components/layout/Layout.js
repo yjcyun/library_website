@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Footer from './Footer';
 import Header from './Header'
 import MobileAccount from './MobileAccount';
 import MobileMenu from './MobileMenu';
@@ -18,7 +19,10 @@ const Layout = ({ children }) => {
       />
       {open && <MobileMenu open={open} setOpen={setOpen} />}
       {openAccount && <MobileAccount open={openAccount} setOpen={setOpenAccount} />}
-      {children}
+      <main className='page-center'>
+        {children}
+      </main>
+      <Footer />
     </>
   )
 }

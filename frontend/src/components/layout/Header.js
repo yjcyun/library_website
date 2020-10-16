@@ -27,7 +27,7 @@ const Header = ({ open, setOpen, openAccount, setOpenAccount }) => {
           </div>
           {/* Mobile */}
           <div className='mobile'>
-            <button onClick={() => {
+            <button className='mobile-btn'onClick={() => {
               setOpenAccount(!openAccount);
               setOpen(false);
             }}>
@@ -44,6 +44,7 @@ const HeaderStyled = styled.nav`
   padding: 1rem;
   align-items: center;
   background: var(--primary-clr);
+  height: 5rem;
 
   a {
     color: #fff;
@@ -74,6 +75,12 @@ const HeaderStyled = styled.nav`
     }
   }
 
+  .mobile-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+  }
+
   @media (min-width: 996px) {
     .logo-container {
       font-size: 2.5rem;
@@ -82,6 +89,7 @@ const HeaderStyled = styled.nav`
     .header-links {
       .desktop {
         display: flex;
+        align-items: center;
       }
       .mobile {
         display: none;
