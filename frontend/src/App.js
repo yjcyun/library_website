@@ -1,15 +1,14 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import HomePage from './pages/HomePage';
 
 
 const App=() =>{
-  
-
   return (
     <BrowserRouter>
         <Layout>
-          App
+          <Route exact path='/' component={HomePage}/>
         </Layout>
     </BrowserRouter>
   );
