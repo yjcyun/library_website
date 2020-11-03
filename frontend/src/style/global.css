@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,700&display=swap');
 
 :root {
-  --primary-clr:#001C71;
+  --primary-clr: #001c71;
   --primary-clr-2: #0029a4;
+  --black: #333;
+  --primary-ff: 'Raleway', sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -11,11 +13,12 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--primary-ff);
+  color: var(--black);
 }
 
 a {
-  color: #333;
+  color: var(--black);
   text-decoration: none;
 }
 
